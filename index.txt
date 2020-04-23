@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Divine Public School</title>
+
+    <style>
+      .jumbotron h1 {
+        padding-bottom: 20px;
+      }
+      .center {
+        text-align: center;
+        margin: auto;
+      }
+      .width100 {
+        width: 100%;
+        text-align: left;
+      }
+      .wa-icon {
+        height: 60px;
+      }
+      .card-header {
+        background-color: #ededed;
+      }
+      .logo {
+        margin: auto;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="center">
+        <img
+          class="logo"
+          src="https://firebasestorage.googleapis.com/v0/b/dpsadmin-339a7.appspot.com/o/logo.png?alt=media&token=797d0f1f-d414-4945-a921-5a525c740816"
+          alt=""
+        />
+      </div>
+      <h1 class="display-4 center">Divine Public School</h1>
+      <p class="lead">
+        महोदय, अवकाश के दिनों में हर रविवार को Homework दिया जायेगा। बच्चे इसकी
+        सूचना अपने सहपाठियों को भी दें। सूचना या Home Work पाने हेतु निचे दिए गए
+        लिंक पर जाये ।
+      </p>
+
+    <div class="accordion" id="accordionExample">
+    </div>
+    
+    <script>
+
+myData = {
+  "0": {
+    "index":"0",
+    "name":"Lower Nursery",
+    "link":"https://chat.whatsapp.com/KLznGaTHziOKyfQI9Vbjir"
+  },
+  "1": {
+    "index":"1",
+    "name":"Upper Nursery",
+    "link":"https://chat.whatsapp.com/KAp4SljmeZWDm7U0Gei2SK"
+  },
+  "2": {
+    "index":"2",
+    "name":"Class 1",
+    "link":"https://chat.whatsapp.com/Gwupbhdl9EXBHeAKhdNQHq"
+  },
+  "3": {
+    "index":"3",
+    "name":"Class 2",
+    "link":"https://chat.whatsapp.com/CRZ0LOwIDL73rWnjaxWqDB"
+  },
+  "4": {
+    "index":"4",
+    "name":"Class 3",
+    "link":"https://chat.whatsapp.com/KhVQywT22HHJexX1IRV5Mz"
+  },
+  "5": {
+    "index":"5",
+    "name":"Class 4",
+    "link":"https://chat.whatsapp.com/J35F3QYFefO7BYGHRPGVOX"
+  },
+  "6": {
+    "index":"6",
+    "name":"Class 5",
+    "link":"https://chat.whatsapp.com/DEkERa9C2Zd7U8wEKHOL43"
+  },
+  "7": {
+    "index":"7",
+    "name":"Class 6",
+    "link":"https://chat.whatsapp.com/LETWG9WmZIy7QvyToiOTw8"
+  },
+  "8": {
+    "index":"8",
+    "name":"Class 7",
+    "link":"https://chat.whatsapp.com/JpncE7KIbQsJj7Pw5D42if"
+  },
+  "9": {
+    "index":"9",
+    "name":"Class 8",
+    "link":"https://chat.whatsapp.com/JFPoZnxrKDJ8jazd53hyuS"
+  }
+ }
+
+var count = Object.keys(myData).length;
+
+for (let i = 0; i < count; i++) {
+  document.getElementById('accordionExample').innerHTML += '<div class="card">' +
+        '<div class="card-header" id="heading">' +
+        '  <h2 class="mb-0">' +
+        '    <button' +
+        '      class="btn btn-link collapsed width100"' +
+        '      type="button"' +
+        '      data-toggle="collapse"' +
+        '      data-target="#collapse' + myData[i].index + '"' +
+        '      aria-expanded="false"' +
+        '      aria-controls="collapse' + myData[i].index + '"' +
+        '    >' +
+        '      ' + myData[i].name + '' +
+        '      <span style="float:right"> &#9660; </span>' +
+        '    </button>' +
+        '  </h2>' +
+        '</div>' +
+
+        '<div' +
+        '  id="collapse' + myData[i].index + '"' +
+        '  class="collapse"' +
+        '  aria-labelledby="heading' + myData[i].index + '"' +
+        '  data-parent="#accordionExample"' +
+        '>' +
+        '  <div class="card-body">' +
+        '    <img' +
+        '      src="https://whatsappbrand.com/wp-content/themes/whatsapp-brc/images/WhatsApp_Logo_1.png"' +
+        '      alt=""' +
+        '      class="wa-icon"' +
+        '    />' +
+        '    <a href="' + myData[i].link + '">' +
+        '      Click here to join ' + myData[i].name + ' WhatsApp Group' +
+        '  </a>' +
+        '  </div>' +
+        '</div>' +
+        '</div>'
+}
+
+
+
+    </script>
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
